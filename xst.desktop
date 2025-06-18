@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=XST Terminal
+GenericName=Terminal Emulator
+Comment=A simple GPU-accelerated terminal
+Keywords=terminal;console;shell;prompt;command;xterm;st;
+Exec=/usr/local/bin/xst
+Icon=utilities-terminal
+Terminal=false
+Categories=Utility;System;TerminalEmulator;
