@@ -12,9 +12,11 @@ CC = cc
 # -std=c99:       Enforce the C99 standard.
 # -pedantic:      Issue all warnings demanded by the standard; reject non-standard extensions.
 # -Wall -Wextra:  Enable all major warnings plus extra ones.
-# -Os:            Optimize for binary size.
+# -O3:            Optimize for performance.
 # pkg-config:     Automatically find required headers for external libraries.
-CFLAGS   = -std=c99 -pedantic -Wall -Wextra -Os $(shell pkg-config --cflags x11 gl freetype2)
+# -flto           Link time optimization.
+# -march=native   Compile for native CPU.
+CFLAGS   = -std=c99 -pedantic -Wall -Wextra -O3 -flto -march=native $(shell pkg-config --cflags x11 gl freetype2)
 
 # LDFLAGS:
 # pkg-config: Finds the required library flags for X11, GL, and FreeType.
